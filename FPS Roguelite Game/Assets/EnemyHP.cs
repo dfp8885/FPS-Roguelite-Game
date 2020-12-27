@@ -21,20 +21,29 @@ public class EnemyHP : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, DamageMultiplier multiplier) {
+    public bool TakeDamage(int damage, DamageMultiplier multiplier) {
         currentHealth -= damage * multiplier.damageMultiplier;
 
         if (healthBar != null) {
             healthBar.SetHP(currentHealth);
         }
 
-        if (currentHealth == 0) { Die(); }
+        if (currentHealth <= 0){
+            Die();
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     void Die() {
         isDead = true;
 
-        GetComponent<Collider>().enabled = false;
-        this.enabled = false;
+        Destroy(gameObject, 1f);
+    }
+
+    public int getCurrentHealth() {
+        return currentHealth;
     }
 }

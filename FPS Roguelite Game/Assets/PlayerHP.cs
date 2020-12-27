@@ -44,9 +44,6 @@ public class PlayerHP : MonoBehaviour
             nextUpdate = Time.time + shieldRechargeTick;
         }
 
-        if (Input.GetMouseButtonDown(0)) {
-            TakeDamage(50);
-        }
         shieldCooldown.SetTimer(nextRecharge - Time.time);
     }
 
