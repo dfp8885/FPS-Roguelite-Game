@@ -15,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask enemyMask;
 
     Vector3 velocity;
     bool isGrounded;
+    bool isOnEnemy;
     float curNumOfJumps;
     bool isSprinting;
 
@@ -32,8 +34,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isOnEnemy = Physics.CheckSphere(groundCheck.position, groundDistance, enemyMask);
 
-        if (isGrounded && velocity.y < 0) { velocity.y = -2f; }
+        if ((isGrounded||isOnEnemy) && velocity.y < 0) { velocity.y = -2f; }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
