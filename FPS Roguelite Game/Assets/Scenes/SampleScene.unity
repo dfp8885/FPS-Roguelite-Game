@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 9160344299310182906, guid: a368bb825c3747a4aa199f14a4970307, type: 3}
-  numOfLayers: 4
+  numOfLayers: 3
 --- !u!4 &1301323692
 Transform:
   m_ObjectHideFlags: 0
