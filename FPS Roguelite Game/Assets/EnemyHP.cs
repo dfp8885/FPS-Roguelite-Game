@@ -29,18 +29,17 @@ public class EnemyHP : MonoBehaviour
         }
 
         if (currentHealth <= 0){
-            Die();
-            return true;
+            return Die();
         }
         else {
             return false;
         }
     }
 
-    void Die() {
+    bool Die() {
         isDead = true;
-
-        Destroy(gameObject, 1f);
+        Destroy(gameObject);
+        return isDead;
     }
 
     public int getCurrentHealth() {
