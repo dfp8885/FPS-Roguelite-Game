@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
 
         if (enemyHP != null) {
             killed = enemyHP.TakeDamage(damage, multiplier);
+            gun.objectHit();
             if (killed) {
                 gun.incrementKills();
             }

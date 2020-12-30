@@ -663,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -205}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 880, y: -470}
+  m_SizeDelta: {x: 120.989624, y: 120.989624}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1098220342
 MonoBehaviour:
@@ -699,8 +699,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: abb8b03dc338cc94aaaa6f46f679c404, type: 3}
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   bullet: {fileID: 1688434429318910815, guid: 227589c01abd62a4198eec8d2da209d0, type: 3}
   gun: {fileID: 357246418}
   fireRate: 5
-  fireForce: 3500
+  fireForce: 2500
 --- !u!1 &1648485864
 GameObject:
   m_ObjectHideFlags: 0

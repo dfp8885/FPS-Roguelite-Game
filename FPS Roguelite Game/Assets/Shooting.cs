@@ -12,11 +12,7 @@ public class Shooting : MonoBehaviour
     private float fireRateTime = 0f;
     private int numOfKills = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()
@@ -41,5 +37,9 @@ public class Shooting : MonoBehaviour
 
     public int getNumOfKills() {
         return numOfKills;
+    }
+
+    public void objectHit() { 
+        
     }
 }
