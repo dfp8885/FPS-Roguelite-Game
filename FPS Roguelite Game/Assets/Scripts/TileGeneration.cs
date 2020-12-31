@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TileGeneration : MonoBehaviour
 {
     public GameObject[] tiles;
+    public NavMeshSurface meshSurface;
 
     public int numOfLayers;
     
@@ -22,7 +24,7 @@ public class TileGeneration : MonoBehaviour
         
         // Start building
         BuildMap(numOfLayers);
-
+        meshSurface.BuildNavMesh();
     }
 
     private void BuildMap(int layers) {
