@@ -35,40 +35,44 @@ public class TileGeneration : MonoBehaviour
 
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move down
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - (2*height));
             }
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move down and left
                 transform.position = new Vector3(transform.position.x - width, transform.position.y, transform.position.z - height);
             }
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move up and left
                 transform.position = new Vector3(transform.position.x - width, transform.position.y, transform.position.z + height);
             }
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move up
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + (2*height));
             }
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move up and right
                 transform.position = new Vector3(transform.position.x + width, transform.position.y, transform.position.z + height);
             }
             for (int i = 0; i < layerNum; i++){
                 // Create a tile
-                Instantiate(tiles[0], transform.position, Quaternion.identity);
+                Instantiate(tiles[randTile()], transform.position, Quaternion.identity);
                 // Move down and right
                 transform.position = new Vector3(transform.position.x + width, transform.position.y, transform.position.z - height);
             }
         }
+    }
+
+    private int randTile() {
+        return Random.Range(0, tiles.Length);
     }
 }
