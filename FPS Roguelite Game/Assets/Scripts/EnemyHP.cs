@@ -16,6 +16,7 @@ public class EnemyHP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = maxHealth * healthMultiplier;
         currentHealth = maxHealth;
         if (healthBar != null) {
             healthBar.SetMaxHP(maxHealth);

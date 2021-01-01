@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+    public FloorProgressBar progress;
     public GameObject pauseMenuUI;
     public GameObject HUD;
 
@@ -19,6 +20,9 @@ public class PauseMenu : MonoBehaviour
             else {
                 Pause();
             }
+        }
+        if (FloorProgressBar.floorComplete) {
+            LoadNextFloor();
         }
     }
 
@@ -40,7 +44,16 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
+    }
+
+    public void LoadNextFloor() {
+        pauseMenuUI.SetActive(false);
+        HUD.SetActive(true);
+        Time.timeScale = 1f;
+        TileGeneration.BossFloor = !TileGeneration.BossFloor;
+        progress.progressReset();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame() {
