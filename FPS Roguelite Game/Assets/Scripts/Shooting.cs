@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public FloorProgressBar floorProgressBar;
     public GameObject bullet;
     public GameObject hitMarker;
     public GameObject critHitMarker;
@@ -39,8 +40,13 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    public void incrementKills() {
+    public void incrementKills(int amount) {
         numOfKills++;
+
+        // Award player with floor progress
+        floorProgressBar.addFloorProgress(amount);
+
+        // Award player with XP
     }
 
     public void resetKills(){

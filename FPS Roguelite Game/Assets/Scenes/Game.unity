@@ -1307,7 +1307,7 @@ MonoBehaviour:
   - {fileID: 9160344299310182906, guid: 76337d24341773142b58b49b3dce551a, type: 3}
   - {fileID: 9160344299310182906, guid: 2f6dfee2b736b1140b1df0caacba066a, type: 3}
   meshSurface: {fileID: 1156748822}
-  numOfLayers: 3
+  numOfLayers: 4
 --- !u!4 &1301323692
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1d514e02f87af41893b431abbb15bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorProgressBar: {fileID: 1852519712}
   bullet: {fileID: 1688434429318910815, guid: 227589c01abd62a4198eec8d2da209d0, type: 3}
   hitMarker: {fileID: 190450830}
   critHitMarker: {fileID: 1561300518}
@@ -1923,6 +1924,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842456702}
   m_CullTransparentMesh: 0
+--- !u!114 &1852519712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1823179859984639662, guid: 742ed7cef4038444b81a89eb62ece8f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897721163524577504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54900657548e81742a75dadb8cf987a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976938616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2420,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1897721163185451807, guid: 742ed7cef4038444b81a89eb62ece8f2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435171540928253482, guid: 742ed7cef4038444b81a89eb62ece8f2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435171540928253482, guid: 742ed7cef4038444b81a89eb62ece8f2,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

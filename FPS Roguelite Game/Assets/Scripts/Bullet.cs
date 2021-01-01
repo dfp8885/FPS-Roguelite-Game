@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
                 // If the bullet killed an enemy notify the gun to keep track
                 if (killed)
                 {
-                    gun.incrementKills();
+                    gun.incrementKills(enemyHP.healthMultiplier);
                 }
             }
 

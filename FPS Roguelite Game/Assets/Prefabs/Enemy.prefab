@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   maxHealth: 50
+  healthMultiplier: 1
   healthBar: {fileID: 4094080776660600440}
   isDead: 0
 --- !u!114 &852080072277457628

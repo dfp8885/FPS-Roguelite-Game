@@ -7,6 +7,7 @@ public class EnemyHP : MonoBehaviour
     public Animator animator;
 
     public int maxHealth = 50;
+    public int healthMultiplier = 1;
     int currentHealth;
 
     public HPBar healthBar;
