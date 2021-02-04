@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -70,6 +71,8 @@ public class PlayerHP : MonoBehaviour
             // Update HP Bars
             healthBar.SetHP(currentHealth);
             shieldBar.SetHP(currentShield);
+
+            if (currentHealth <= 0) { Die(); }
         }
     }
 
@@ -82,6 +85,11 @@ public class PlayerHP : MonoBehaviour
     public void Heal(int amount) {
         currentHealth += amount;
         healthBar.SetHP(currentHealth);
+    }
+
+    void Die() {
+        TileGeneration.BossFloor = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 
