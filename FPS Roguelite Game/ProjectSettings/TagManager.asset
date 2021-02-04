@@ -15,9 +15,9 @@ TagManager:
   - 
   - Ground
   - Enemies
-  - Weapons
+  - EnemyProjectiles
   - Player
-  - PlayerShots
+  - PlayerProjectiles
   - 
   - 
   - 
@@ -36,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Weapons
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Physics.IgnoreLayerCollision(11, 12, true);
+        Physics.IgnoreLayerCollision(9, 10, true);
         curNumOfJumps = maxNumOfJumps;
         isSprinting = false;
     }

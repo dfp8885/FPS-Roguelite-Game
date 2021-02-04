@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyRadius : MonoBehaviour
 {
     public Transform enemyGFX;
-    public float rangeRadius = 60f;
+    public float rangeRadius = 30f;
     public LayerMask playerLayers;
     public bool playerFound = false;
 

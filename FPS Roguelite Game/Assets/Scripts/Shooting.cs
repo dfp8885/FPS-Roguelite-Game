@@ -20,7 +20,11 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If Fire1 is pressed fire bullet
+        // This implementation allows for the player to hold down the fire button
         if (Input.GetButton("Fire1")) {
+            // An if statement is used here to only allow the gun to shoot at certain intervals
+            // this is to mimic a gun's rate of fire
             if (Time.time > fireRateTime) {
                 GameObject go = (GameObject)Instantiate(bullet, firePoint.position, firePoint.rotation);
                 go.GetComponent<Bullet>().setGun(this);
@@ -28,6 +32,8 @@ public class Shooting : MonoBehaviour
                 fireRateTime = Time.time + 1/fireRate;
             }
         }
+
+        // Reset hitmarker after a hitMarkerTime
         if (hitMarkerTime > 0)
         {
             hitMarkerTime -= Time.deltaTime;
@@ -49,14 +55,17 @@ public class Shooting : MonoBehaviour
         // Award player with XP
     }
 
+    // setter to reset num of player kills
     public void resetKills(){
         numOfKills = 0;
     }
 
+    // getter to get num of player kills
     public int getNumOfKills() {
         return numOfKills;
     }
 
+    // function is used to not
     public void objectHit(bool crit) {
         if (crit) {
             critHitMarker.SetActive(true);
