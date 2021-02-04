@@ -144,16 +144,12 @@ public class TileGeneration : MonoBehaviour
         // This function will be used to randomize times based off of tile type
         // Certain types will be given different weights when considered in generation
         int rand = Random.Range(0, 10);
-        Debug.Log(rand);
         if (rand > 3) {
             if (rand > 8) {
-                Debug.Log("elite");
                 return eliteTiles[randNum(eliteTiles)];
             }
-            Debug.Log("enemy");
             return emptyTiles[randNum(emptyTiles)];
         }
-        Debug.Log("empty");
         return enemyTiles[randNum(enemyTiles)];
     }
 }

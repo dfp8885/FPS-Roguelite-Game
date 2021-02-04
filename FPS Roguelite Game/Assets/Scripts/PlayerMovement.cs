@@ -24,10 +24,11 @@ public class PlayerMovement : MonoBehaviour
     bool isSprinting;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         Physics.IgnoreLayerCollision(11, 12, true);
+        Physics.IgnoreLayerCollision(12, 12, true);
         Physics.IgnoreLayerCollision(9, 10, true);
+        Physics.IgnoreLayerCollision(10, 10, true);
         curNumOfJumps = maxNumOfJumps;
         isSprinting = false;
     }

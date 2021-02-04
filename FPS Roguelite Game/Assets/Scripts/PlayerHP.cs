@@ -16,6 +16,8 @@ public class PlayerHP : MonoBehaviour
 
     public CooldownTimer shieldCooldown;
 
+    public GameObject invulnGFX;
+
     bool recoveredFromFull = true;
     float invulnTime = 1f;
     float invulnActive;
@@ -46,6 +48,10 @@ public class PlayerHP : MonoBehaviour
         }
 
         shieldCooldown.SetTimer(nextRecharge - Time.time);
+
+        if (Time.time > invulnActive && invulnGFX.activeSelf) {
+            invulnGFX.SetActive(false);
+        }
     }
 
     public void TakeDamage(int damage) {
@@ -59,6 +65,12 @@ public class PlayerHP : MonoBehaviour
                 currentShield = 0;
                 invulnActive = Time.time + invulnTime;
                 recoveredFromFull = false;
+                
+                // Update UI
+                invulnGFX.SetActive(true);
+
+                // Play shield break sound
+
             }
             else if (currentShield <= 0 && !recoveredFromFull) {
                 int tempDamage = Mathf.Abs(currentShield);

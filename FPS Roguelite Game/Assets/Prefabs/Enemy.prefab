@@ -164,6 +164,8 @@ MonoBehaviour:
   firePoint: {fileID: 4094080775552430314}
   fireRate: 1
   fireForce: 1500
+  numShots: 1
+  spreadAngle: 4
 --- !u!114 &566783190516413651
 MonoBehaviour:
   m_ObjectHideFlags: 0
