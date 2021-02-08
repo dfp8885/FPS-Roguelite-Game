@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour{
+public class EnemyAI : MonoBehaviour {
     public GameObject player;
     public GameObject fireball;
     public EnemyRadius enemyRadius;
@@ -14,12 +14,14 @@ public class EnemyAI : MonoBehaviour{
     public float numShots = 1f;
     public float spreadAngle = 2f;
 
-    private float fireRateTime = 0f;
+    public bool isElite = false;
+    public int eliteType;
 
+    private float fireRateTime = 0f;
 
     private void Start() {
         player = GameObject.Find("First Person Player");
-        
+
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class EnemyAI : MonoBehaviour{
             if (Time.time > fireRateTime) {
                 if (numShots == 1) {
                     GameObject go = (GameObject)Instantiate(fireball, firePoint.position, qAngle);
-                    go.GetComponent<Rigidbody>().AddForce((player.transform.position-firePoint.position).normalized * fireForce);
+                    go.GetComponent<Rigidbody>().AddForce((player.transform.position - firePoint.position).normalized * fireForce);
                 }
                 else {
                     for (int i = 0; i < numShots; i++) {
@@ -47,5 +49,10 @@ public class EnemyAI : MonoBehaviour{
                 fireRateTime = Time.time + 1 / fireRate;
             }
         }
+    }
+
+    public void setElite(int eliteType){
+        this.eliteType = eliteType;
+        isElite = true;
     }
 }

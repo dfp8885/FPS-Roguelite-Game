@@ -141,9 +141,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  eliteMaterials:
+  - {fileID: 2100000, guid: 2e42dcc872ed0f5458179db15626ac51, type: 2}
+  body: {fileID: 4094080775940333973}
+  ai: {fileID: 852080072277457628}
   maxHealth: 50
   healthMultiplier: 1
   healthBar: {fileID: 4094080776660600440}
+  isElite: 0
   isDead: 0
 --- !u!114 &852080072277457628
 MonoBehaviour:
@@ -166,6 +171,8 @@ MonoBehaviour:
   fireForce: 1500
   numShots: 1
   spreadAngle: 4
+  isElite: 0
+  eliteType: 0
 --- !u!114 &566783190516413651
 MonoBehaviour:
   m_ObjectHideFlags: 0
