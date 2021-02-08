@@ -143,6 +143,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   eliteMaterials:
   - {fileID: 2100000, guid: 2e42dcc872ed0f5458179db15626ac51, type: 2}
+  - {fileID: 2100000, guid: 3eb186ea3a49d3c4e92ffa36d81abd1b, type: 2}
+  - {fileID: 2100000, guid: 11afe4e824f3c094c880f74ae03a2d71, type: 2}
   body: {fileID: 4094080775940333973}
   ai: {fileID: 852080072277457628}
   maxHealth: 50
@@ -165,10 +167,16 @@ MonoBehaviour:
   player: {fileID: 0}
   fireball: {fileID: 9127864986589864484, guid: a48609759e8a49d42aaa19e16fb40fdb,
     type: 3}
+  fireballHoming: {fileID: 9127864986589864484, guid: a52cfd6b007e43846a69e6b17aaa98bd,
+    type: 3}
+  fireballLarge: {fileID: 9127864986589864484, guid: 96bd3af9ed1c8d94280b3c7a8bf6fe85,
+    type: 3}
+  fireballSmall: {fileID: 9127864986589864484, guid: d1b9dac3ae495444281dd77b02b77144,
+    type: 3}
   enemyRadius: {fileID: 566783190516413651}
   firePoint: {fileID: 4094080775552430314}
   fireRate: 1
-  fireForce: 1500
+  fireForce: 2000
   numShots: 1
   spreadAngle: 4
   isElite: 0

@@ -27,4 +27,8 @@ public class EnemyProjectile : MonoBehaviour
         hit = true;
     }
 
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
 }

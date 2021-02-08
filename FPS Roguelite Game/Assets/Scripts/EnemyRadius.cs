@@ -17,5 +17,8 @@ public class EnemyRadius : MonoBehaviour
         foreach (Collider coll in foundColliders) {
             playerFound = true;
         }
+        if (foundColliders == null) {
+            playerFound = false;
+        }
     }
 }

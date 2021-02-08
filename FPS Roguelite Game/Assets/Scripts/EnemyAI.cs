@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour {
-    public GameObject player;
-    public GameObject fireball;
+    public GameObject player, fireball, fireballHoming, fireballLarge, fireballSmall;
     public EnemyRadius enemyRadius;
     public Transform firePoint;
     public float fireRate = 1f;
@@ -21,7 +20,6 @@ public class EnemyAI : MonoBehaviour {
 
     private void Start() {
         player = GameObject.Find("First Person Player");
-
     }
 
     // Update is called once per frame
@@ -54,5 +52,18 @@ public class EnemyAI : MonoBehaviour {
     public void setElite(int eliteType){
         this.eliteType = eliteType;
         isElite = true;
+        if (eliteType == 0) {
+            fireball = fireballHoming;
+            fireForce = 1500;
+        }
+        else if (eliteType == 1) {
+            fireball = fireballLarge;
+            fireRate = 0.5f;
+        }
+        else if (eliteType == 2) {
+            fireball = fireballSmall;
+            fireRate = 2f;
+            fireForce = 2500;
+        }
     }
 }
